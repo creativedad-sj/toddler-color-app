@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Select Your Activity</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Select Your Activity</h1>
+  </header>
+  <main>
+    <section id="activity-selection">
+      <div id="alphabet-section">
+        <h2>Choose a Letter</h2>
+        <div id="alphabet-grid">
+          <!-- Selection grid for letters -->
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              const alphabetGrid = document.getElementById("alphabet-grid");
+              for (let i = 65; i <= 90; i++) {
+                const letter = String.fromCharCode(i);
+                const button = document.createElement("button");
+                button.innerText = letter;
+                button.setAttribute("onclick", `selectCharacter('letter', '${letter}')`);
+                button.classList.add("character-btn");
+                alphabetGrid.appendChild(button);
+              }
+            });
+          </script>
+        </div>
+      </div>
+
+      <div id="number-section">
+        <h2>Choose a Number</h2>
+        <div id="number-grid">
+          <!-- Selection grid for numbers -->
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              const numberGrid = document.getElementById("number-grid");
+              for (let i = 0; i <= 9; i++) {
+                const button = document.createElement("button");
+                button.innerText = i;
+                button.setAttribute("onclick", `selectCharacter('number', '${i}')`);
+                button.classList.add("character-btn");
+                numberGrid.appendChild(button);
+              }
+            });
+          </script>
+        </div>
+      </div>
+
+      <div id="free-drawing-section">
+        <h2>Start Free Drawing</h2>
+        <button class="character-btn free-btn" onclick="startFreeDrawing()">Free Drawing Canvas</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Background Music -->
+  <audio id="background-music" src="sounds/background-music.mp3" loop autoplay></audio>
+
+  <!-- Mute/Unmute Button -->
+  <button id="music-toggle" onclick="toggleMusic()">Mute Music</button>
+
+  <footer>
+    <p>© 2025 Digital Coloring Book for Kids | Safe & Ad-Free</p>
+  </footer>
+  <script src="select.js"></script>
+  <script src="buttonSounds.js"></script> <!-- Add the button sounds JS -->
+  <script src="music.js"></script> <!-- Add the music toggle JS -->
+</body>
+</html>

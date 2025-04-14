@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Color Your Character</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Color Your Character</h1>
+  </header>
+  <main>
+    <section id="canvas-area">
+      <div id="canvas-wrapper">
+        <!-- SVG Canvas: The selected character or shape is rendered dynamically -->
+        <svg id="letter-canvas" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+          <rect id="canvas-border" x="0" y="0" width="600" height="600" fill="none" stroke="black" stroke-width="10" />
+          <rect id="background" width="100%" height="100%" fill="white" onclick="applyColor(this)" />
+        </svg>
+      </div>
+      <div id="palette">
+        <h3>Pick a Crayon:</h3>
+        <div class="crayon-wheel">
+          <button class="crayon red" onclick="setColor('red')">Red</button>
+          <button class="crayon blue" onclick="setColor('blue')">Blue</button>
+          <button class="crayon green" onclick="setColor('green')">Green</button>
+          <button class="crayon yellow" onclick="setColor('yellow')">Yellow</button>
+          <button class="crayon orange" onclick="setColor('orange')">Orange</button>
+          <button class="crayon pink" onclick="setColor('pink')">Pink</button>
+        </div>
+        <div class="button-group">
+          <button id="reset" class="styled-btn" onclick="resetCanvas()">Reset</button>
+          <button id="undo" class="styled-btn" onclick="undoAction()">Undo</button>
+          <button id="save" class="styled-btn" onclick="saveCanvas()">Save</button>
+          <button id="change-selection" class="styled-btn" onclick="changeSelection()">Pick Another</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Background Music -->
+  <audio id="background-music" src="sounds/background-music.mp3" loop autoplay></audio>
+
+  <!-- Mute/Unmute Music Button -->
+  <section id="music-controls">
+    <button id="music-toggle" onclick="toggleMusic()">Mute Music</button>
+  </section>
+
+  <footer>
+    <p>© 2025 Digital Coloring Book for Kids | Safe & Ad-Free</p>
+  </footer>
+
+  <!-- JavaScript Files -->
+  <script src="canvas.js"></script>
+  <script src="buttonSounds.js"></script> <!-- Handles button sound effects -->
+  <script src="music.js"></script> <!-- Manages background music controls -->
+</body>
+</html>

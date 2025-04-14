@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Free Drawing Canvas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Draw Freely!</h1>
+  </header>
+  <main>
+    <section id="drawing-area">
+      <!-- Canvas Area -->
+      <canvas id="free-canvas" width="600" height="600"></canvas>
+
+      <!-- Color Palette -->
+      <div id="palette">
+        <h3>Pick a Color:</h3>
+        <div class="crayon-wheel">
+          <button class="crayon red" onclick="setDrawingColor('red')">Red</button>
+          <button class="crayon blue" onclick="setDrawingColor('blue')">Blue</button>
+          <button class="crayon green" onclick="setDrawingColor('green')">Green</button>
+          <button class="crayon yellow" onclick="setDrawingColor('yellow')">Yellow</button>
+          <button class="crayon orange" onclick="setDrawingColor('orange')">Orange</button>
+          <button class="crayon pink" onclick="setDrawingColor('pink')">Pink</button>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="button-group">
+          <button id="reset" class="styled-btn" onclick="resetDrawingCanvas()">Clear</button>
+          <button id="save" class="styled-btn" onclick="saveDrawingCanvas()">Save</button>
+          <button id="change-selection" class="styled-btn" onclick="changeSelection()">Pick Another</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Background Music -->
+  <audio id="background-music" src="sounds/background-music.mp3" loop autoplay></audio>
+
+  <!-- Mute/Unmute Music Button -->
+  <section id="music-controls">
+    <button id="music-toggle" onclick="toggleMusic()">Mute Music</button>
+  </section>
+
+  <footer>
+    <p>© 2025 Digital Coloring Book for Kids | Safe & Ad-Free</p>
+  </footer>
+
+  <!-- JavaScript Files -->
+  <script src="freeDrawing.js"></script>
+  <script src="buttonSounds.js"></script> <!-- For button sound effects -->
+  <script src="music.js"></script> <!-- For background music toggle -->
+</body>
+</html>
