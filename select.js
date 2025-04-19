@@ -14,6 +14,17 @@ function selectCharacter(type, value) {
 }
 
 /**
+ * Save the selected shape and navigate to the coloring canvas page.
+ * @param {string} shape - The shape type ("triangle", "rectangle", "square").
+ */
+function selectShape(shape) {
+  const item = { type: "shape", value: shape };
+  localStorage.setItem("selectedItem", JSON.stringify(item));
+  window.location.href = "canvas.html"; // Redirect to canvas page
+}
+
+
+/**
  * Navigate to the free drawing page.
  */
 function startFreeDrawing() {
