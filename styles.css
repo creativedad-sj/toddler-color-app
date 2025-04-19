@@ -81,16 +81,16 @@ footer {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 10px;
   margin-top: 20px;
 }
 
 .crayon {
-  width: 100px;
+  width: 80px;
   height: 40px;
   border-radius: 20px;
   border: 2px solid #000;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;
@@ -102,6 +102,12 @@ footer {
 .crayon.yellow { background-color: #ffd700; }
 .crayon.orange { background-color: #ff8c00; }
 .crayon.pink { background-color: #ff69b4; }
+.crayon.purple { background-color: #800080; }
+.crayon.brown { background-color: #8b4513; }
+.crayon.gray { background-color: #808080; }
+.crayon.black { background-color: #000000; color: white; }
+.crayon.cyan { background-color: #00ffff; }
+.crayon.lime { background-color: #00ff00; }
 
 .crayon:hover {
   transform: scale(1.2);
