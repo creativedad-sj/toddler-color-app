@@ -130,14 +130,13 @@ document.addEventListener("DOMContentLoaded", function () {
                   stroke-width="3" text-anchor="middle" alignment-baseline="central"
                   onclick="applyColor(this)">${item.value}</text>`;
     } else if (item.type === "shape") {
-      if (item.value === "circle") {
-        content = `<circle cx="300" cy="300" r="200" fill="white" stroke="black" stroke-width="3" onclick="applyColor(this)" />`;
-      } else if (item.value === "square") {
-        content = `<rect x="100" y="100" width="400" height="400" fill="white" stroke="black" stroke-width="3" onclick="applyColor(this)" />`;
-      } else if (item.value === "triangle") {
-        content = `<polygon points="300,50 50,550 550,550" fill="white" stroke="black" stroke-width="3" onclick="applyColor(this)" />`;
-      }
-    }
+     if (item.value === "triangle") {
+      content = `<polygon points="300,50 50,550 550,550" fill="white" stroke="black" stroke-width="3" onclick="applyColor(this)" />`;
+    } else if (item.value === "rectangle") {
+      content = `<rect x="100" y="200" width="400" height="250" fill="white" stroke="black" stroke-width="3" onclick="applyColor(this)" />`;
+    } else if (item.value === "square") {
+      content = `<rect x="100" y="100" width="400" height="400" fill="white" stroke="black" stroke-width="3" onclick="applyColor(this)" />`;
+    }}
 
     // Set the initial SVG content
     svg.innerHTML = `<rect id="canvas-border" x="0" y="0" width="600" height="600" fill="none" stroke="black" stroke-width="10" />
