@@ -74,8 +74,14 @@ footer {
   position: relative;
 }
 
-#letter-canvas, #free-canvas {
+#letter-canvas {
   max-width: 550px;
+  border: 5px solid black;
+  height: auto;
+}
+
+#free-canvas {
+  max-width: 350px;
   border: 5px solid black;
   height: auto;
 }
