@@ -8,16 +8,26 @@
 </head>
 <body>
   <header>
-    <h1>Digital Coloring Book</h1>
+    <h1>🎨 Digital Coloring Book 🎨</h1>
   </header>
+
   <main>
     <section id="home-menu">
-      <p>Welcome, little artist! Let’s have fun coloring.</p>
-      <button class="styled-btn" onclick="window.location.href='select.html'">Start Coloring</button>
+      <p>Welcome, little artist! Let’s have fun coloring. Tap below to start!</p>
+      <button class="styled-btn animated-btn" onclick="window.location.href='select.html'">
+        ✨ Start Coloring ✨
+      </button>
     </section>
   </main>
+
+  <!-- Background Music -->
+  <audio id="background-music" src="sounds/background-music.mp3" loop autoplay></audio>
+  <button id="music-toggle" onclick="toggleMusic()">Mute Music</button>
+
   <footer>
     <p>© 2025 Digital Coloring Book for Kids | Safe & Ad-Free</p>
   </footer>
+
+  <script src="music.js"></script> <!-- Manages background music -->
 </body>
 </html>
